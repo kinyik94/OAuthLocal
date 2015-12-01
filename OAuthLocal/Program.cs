@@ -1,8 +1,12 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace OAuthLocal
 {
@@ -28,6 +32,42 @@ namespace OAuthLocal
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+        public static AuthenticationObject User = null;
+        public static string Base_URL = "http://localhost:49600/";
+
+        public static string SendRequest(string url, string data,  string type = "application/json")
+        {
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            req.Method = "POST";
+
+            req.Credentials = CredentialCache.DefaultCredentials;
+            req.UserAgent = ".NET Framework Example Client";
+            req.ContentType = type;
+            StringWriter responseString = new StringWriter();
+            try
+            {
+                StreamWriter asd = new StreamWriter(req.GetRequestStream());
+                asd.Write(data);
+                asd.Flush();
+                asd.Close();
+
+                HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
+                StreamReader reader = new StreamReader(resp.GetResponseStream());
+
+                responseString.Write(reader.ReadToEnd());
+                if (resp.StatusCode == HttpStatusCode.OK)
+                    return responseString.ToString();
+                else throw new Exception("Bad Request");
+                
+            }
+            finally
+            {
+                responseString.Close();
+            }
+
+        }
+
         [STAThread]
         static void Main()
         {

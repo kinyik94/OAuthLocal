@@ -7,3 +7,6 @@ c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\
 c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.exe
 c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.pdb
 C:\Users\KBence\Documents\Visual Studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.Oauth_Form.resources
+C:\Users\KBence\Documents\Visual Studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.UserForm.resources
+C:\Users\KBence\Documents\Visual Studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.LoginForm.resources
+C:\Users\KBence\Documents\Visual Studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.SignUpForm.resources
