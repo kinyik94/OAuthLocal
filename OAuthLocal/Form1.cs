@@ -14,12 +14,14 @@ using System.Xml.Schema;
 
 namespace OAuthLocal
 {
-    public partial class Form1 : Form
+    public partial class Oauth_Form : Form
     {
 
         private string Base_URL = "http://localhost:49600/";
 
-        public Form1()
+        public AuthenticationObject User = null;
+
+        public Oauth_Form()
         {
             InitializeComponent();
         }
@@ -32,19 +34,36 @@ namespace OAuthLocal
             req.Credentials = CredentialCache.DefaultCredentials;
             req.UserAgent = ".NET Framework Example Client";
             req.ContentType = type;
-            StreamWriter asd = new StreamWriter(req.GetRequestStream());
-            asd.Write(data);
-            asd.Flush();
-            asd.Close();
-
             try
             {
+                StreamWriter asd = new StreamWriter(req.GetRequestStream());
+                asd.Write(data);
+                asd.Flush();
+                asd.Close();
+            
                 HttpWebResponse resp = (HttpWebResponse) req.GetResponse();
                 StreamReader reader = new StreamReader(resp.GetResponseStream());
 
                 StringWriter responseString = new StringWriter();
                 responseString.Write(reader.ReadToEnd());
                 ResponseBox.Text = responseString.ToString();
+
+                if (resp.StatusCode == HttpStatusCode.OK)
+                {
+                    string response = responseString.ToString();
+                    string[] attributes = response.Substring(1, response.Length - 2).Split(',');
+                    Dictionary<string, string> AttrValues = new Dictionary<string, string>();
+                    for (int i = 0; i < attributes.Length; i++)
+                    {
+                        string[] attr = attributes[i].Split(':');
+                        AttrValues[attr[0].Substring(1, attr[0].Length - 2)] = attr[1].Substring(1, attr[1].Length - 2);
+                    }
+
+                    User = new AuthenticationObject(AttrValues["access_token"], login_username_textbox.Text, AttrValues["expires_in"], AttrValues["token_type"]);
+
+                    Token.Text = User.Token;
+                    UserName.Text = User.UserName;
+                }
 
                 responseString.Close();
             }

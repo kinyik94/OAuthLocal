@@ -1,6 +1,6 @@
 ﻿namespace OAuthLocal
 {
-    partial class Form1
+    partial class Oauth_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oauth_Form));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.UserName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResponseBox = new System.Windows.Forms.TextBox();
             this.login_button = new System.Windows.Forms.Button();
             this.login_password_label = new System.Windows.Forms.Label();
             this.login_password_textbox = new System.Windows.Forms.TextBox();
@@ -43,7 +48,7 @@
             this.signup_password_label = new System.Windows.Forms.Label();
             this.signup_password_textbox = new System.Windows.Forms.TextBox();
             this.signup_label = new System.Windows.Forms.Label();
-            this.ResponseBox = new System.Windows.Forms.TextBox();
+            this.Token = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,6 +63,10 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Token);
+            this.splitContainer1.Panel1.Controls.Add(this.UserName);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.ResponseBox);
             this.splitContainer1.Panel1.Controls.Add(this.login_button);
             this.splitContainer1.Panel1.Controls.Add(this.login_password_label);
@@ -76,9 +85,44 @@
             this.splitContainer1.Panel2.Controls.Add(this.signup_password_label);
             this.splitContainer1.Panel2.Controls.Add(this.signup_password_textbox);
             this.splitContainer1.Panel2.Controls.Add(this.signup_label);
-            this.splitContainer1.Size = new System.Drawing.Size(899, 405);
+            this.splitContainer1.Size = new System.Drawing.Size(899, 518);
             this.splitContainer1.SplitterDistance = 429;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // UserName
+            // 
+            this.UserName.AutoSize = true;
+            this.UserName.Location = new System.Drawing.Point(119, 395);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(0, 13);
+            this.UserName.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 433);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Token :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 395);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "UserName:";
+            // 
+            // ResponseBox
+            // 
+            this.ResponseBox.Location = new System.Drawing.Point(48, 224);
+            this.ResponseBox.Multiline = true;
+            this.ResponseBox.Name = "ResponseBox";
+            this.ResponseBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.ResponseBox.Size = new System.Drawing.Size(342, 82);
+            this.ResponseBox.TabIndex = 6;
             // 
             // login_button
             // 
@@ -212,23 +256,24 @@
             this.signup_label.TabIndex = 1;
             this.signup_label.Text = "SignUp Page";
             // 
-            // ResponseBox
+            // Token
             // 
-            this.ResponseBox.Location = new System.Drawing.Point(48, 224);
-            this.ResponseBox.Multiline = true;
-            this.ResponseBox.Name = "ResponseBox";
-            this.ResponseBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ResponseBox.Size = new System.Drawing.Size(342, 82);
-            this.ResponseBox.TabIndex = 6;
+            this.Token.Location = new System.Drawing.Point(93, 430);
+            this.Token.Multiline = true;
+            this.Token.Name = "Token";
+            this.Token.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.Token.Size = new System.Drawing.Size(319, 68);
+            this.Token.TabIndex = 11;
             // 
-            // Form1
+            // Oauth_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 405);
+            this.ClientSize = new System.Drawing.Size(899, 518);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Oauth_Form";
+            this.Text = "OAuth App";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -257,6 +302,10 @@
         private System.Windows.Forms.Button login_button;
         private System.Windows.Forms.Button signup_button;
         private System.Windows.Forms.TextBox ResponseBox;
+        private System.Windows.Forms.Label UserName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Token;
     }
 }
 
