@@ -1,0 +1,9 @@
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\bin\Debug\OAuthLocal.exe.config
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\bin\Debug\OAuthLocal.exe
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\bin\Debug\OAuthLocal.pdb
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.csprojResolveAssemblyReference.cache
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.Form1.resources
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.Properties.Resources.resources
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.csproj.GenerateResource.Cache
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.exe
+c:\users\kbence\documents\visual studio 2013\Projects\OAuthLocal\OAuthLocal\obj\Debug\OAuthLocal.pdb
