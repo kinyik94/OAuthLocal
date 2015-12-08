@@ -18,6 +18,15 @@ namespace OAuthLocal
             InitializeComponent();
         }
 
+        /*
+         * Creates a post request to the provider to register an account.
+         * 
+         * Url: http://localhost:49600/api/account/register
+         * 
+         * Data: the username and password for the new account
+         * If the request is OK, we get back to the default window
+         */
+
         private void signup_button_Click(object sender, EventArgs e)
         {
             string url = Program.Base_URL + "api/account/register";

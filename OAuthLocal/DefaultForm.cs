@@ -16,8 +16,13 @@ namespace OAuthLocal
 {
     public partial class Oauth_Form : Form
     {
-
-        private string Base_URL = "http://localhost:49600/";
+        
+        /*
+         * This is the first window, what we see if we open the application first
+         * 
+         * We can choose between login with an existing account 
+         * and sign up a new account
+         */
 
         public AuthenticationObject User = null;
 

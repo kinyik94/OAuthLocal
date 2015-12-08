@@ -10,6 +10,15 @@ using System.Windows.Forms;
 
 namespace OAuthLocal
 {
+
+    /*
+     * Just a window what print out the username of the user who logged in.
+     * 
+     * If we on this window, we already have authentication token and we can send request
+     * to the server and get data what we can reach.
+     * 
+     */
+
     public partial class UserForm : Form
     {
         public UserForm()

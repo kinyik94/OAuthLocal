@@ -13,6 +13,12 @@ namespace OAuthLocal
 
     public class AuthenticationObject
     {
+
+        /*
+         * This class responsible for store the authentication information
+         * such as username, token, etc.
+         */
+
         public string Token { get; set; }
         public string UserName { get; set; }
         public string Type { get; set; }
@@ -32,6 +38,15 @@ namespace OAuthLocal
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        
+        /*
+         * Set our user to null
+         * Set the Base url
+         * 
+         * Send request method creates the responses to the server
+         * 
+         */
 
         public static AuthenticationObject User = null;
         public static string Base_URL = "http://localhost:49600/";
@@ -47,10 +62,10 @@ namespace OAuthLocal
             StringWriter responseString = new StringWriter();
             try
             {
-                StreamWriter asd = new StreamWriter(req.GetRequestStream());
-                asd.Write(data);
-                asd.Flush();
-                asd.Close();
+                StreamWriter str = new StreamWriter(req.GetRequestStream());
+                str.Write(data);
+                str.Flush();
+                str.Close();
 
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
                 StreamReader reader = new StreamReader(resp.GetResponseStream());

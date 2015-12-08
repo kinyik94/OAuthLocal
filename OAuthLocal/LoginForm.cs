@@ -19,6 +19,19 @@ namespace OAuthLocal
 
         private void login_button_Click(object sender, EventArgs e)
         {
+
+            /*
+             * Send a http POST request to the provider.
+             * The Url: http://localhost:49600/token
+             * data contains the username and the password
+             * in the response we get the authentication token 
+             * if we have account with the username and password
+             * 
+             * Save the token for later requests
+             * 
+             * If we don't have account we get Error what we write out to the TextBox
+             */
+
             string url = Program.Base_URL + "token";
 
             string data = "grant_type=password" +
